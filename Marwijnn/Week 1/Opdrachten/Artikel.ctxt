@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=naam\ prijs
+comment0.target=Artikel(java.lang.String,\ int)
+comment1.params=
+comment1.target=int\ getPrijs()
+comment2.params=
+comment2.target=java.lang.String\ getNaam()
+comment3.params=naam
+comment3.target=void\ setNaam(java.lang.String)
+comment4.params=prijs
+comment4.target=void\ setPrijs(int)
+comment5.params=
+comment5.target=void\ drukAf()
+numComments=6

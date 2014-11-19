@@ -1,0 +1,7 @@
+1b
+Declareren is het toewijzen waarde aan variabelen.
+Initialiseren is de eerste keer toewijzen van een variabel.
+
+4 
+Primitieve types worden direct opgeslagen en objecten
+refereren door een functie om de data op te slaan.
