@@ -6,12 +6,14 @@
  * @version 1 19-11-2014
  */
 public class Kassa {
+    private KassaRij kassaRij;
     private int artikelAantal;
     private int hoeveelheidGeld;
     /**
      * Constructor
      */
     public Kassa(KassaRij kassarij){
+        this.kassaRij = kassarij;
         resetKassa();
     }
     
