@@ -200,6 +200,9 @@ public class Persoon {
     * @param artikel
     */
     public void pakArtikel(Artikel artikel) {
+        if (dienblad == null) {
+            return;
+        }
         dienblad.voegToe(artikel);
     }
     
