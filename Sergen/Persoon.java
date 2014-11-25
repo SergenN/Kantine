@@ -4,7 +4,10 @@ public class Persoon {
     private int dag, maand, jaar;
     private char geslacht;
     private Dienblad dienblad;
-
+    
+    /**
+     * Construct
+     */
     public Persoon(){
         setVoornaam("Onbekend");
         setAchternaam("Onbekend");
@@ -12,7 +15,9 @@ public class Persoon {
         setGeboorteDatum(0,0,0);
         setGeslacht("Onbekend");
     }
-    
+    /**
+     * Construct met parameters
+     */
     public Persoon(long BSN, String voornaam, String achternaam, int dag, int maand, int jaar, String geslacht) {
         setVoornaam(voornaam);
         setAchternaam(achternaam);
@@ -21,6 +26,9 @@ public class Persoon {
         setGeslacht(geslacht);
     }
     
+    /**
+     * Drukt alle gegevens af op het scherm
+     */
     public void drukAf(){
         System.out.println("Voornaam: "+ getVoornaam());
         System.out.println("Achternaam: "+ getAchternaam());
@@ -29,18 +37,34 @@ public class Persoon {
         System.out.println("Burgerserivenummer: "+ getBSN());
     }
     
+    /**
+     * haalt het BSN nummer op
+     * @return het BSN nummer
+     */
     public long getBSN(){
         return BSN;
     }
     
+    /**
+     * haalt de voornaam op
+     * @return de voornaam
+     */
     public String getVoornaam(){
         return voornaam;
     }
     
+    /**
+     * haalt de achternaam op
+     * @return de achternaam
+     */
     public String getAchternaam(){
         return achternaam;
     }
    
+    /**
+     * haalt de achternaam op als deze bekend is
+     * @return de geboortedatum of "onbekend"
+     */
     public String getGeboorteDatum() {
         String temp;
         if (dag==0 && maand==0 && jaar==0) {
@@ -51,6 +75,10 @@ public class Persoon {
         return temp;
     }
     
+    /**
+     * haalt het geslacht op als deze bekend is
+     * @return het geslacht of "onbekend"
+     */
     public String getGeslacht(){
         if (geslacht == 'M'){
             return "Man";
@@ -61,14 +89,27 @@ public class Persoon {
         return "Onbekend";
     }
     
+    
+    /**
+     * zet de achternaam
+     * @param achternaam
+     */
     public void setAchternaam(String achternaam){
         this.achternaam = achternaam;
     }
     
+   /**
+    * zet de voornaam
+    * @param voornaam
+    */
     public void setVoornaam(String voornaam){
         this.voornaam = voornaam;
     }
     
+    /**
+     * zet het geslacht
+     * @param geslacht ("man" of "vrouw")
+     */
     public void setGeslacht(String geslacht){
         if(geslacht.equalsIgnoreCase("man")){
             this.geslacht = 'M';
@@ -79,10 +120,20 @@ public class Persoon {
         }
     }
     
+    /**
+     * zet het BSN nummer
+     * @param BSN
+     */
     public void setBSN(long BSN){
         this.BSN = BSN;
     }
     
+    /**
+     * zet de geboorte datum
+     * @param dag
+     * @param maand
+     * @param jaar
+     */
     public void setGeboorteDatum(int dag, int maand, int jaar){
         if (!isCorrecteDatum(dag, maand, jaar)){
             dag = 0;
@@ -94,6 +145,12 @@ public class Persoon {
         this.jaar = jaar;
     }
     
+    /**
+     * controlleert of het een correcte datum is
+     * @param dag
+     * @param maand
+     * @param jaar
+     */
     private boolean isCorrecteDatum(int dag, int maand, int jaar){
         if (jaar < 1900 || jaar > 2100) {//jaar fout
             return false;
@@ -122,6 +179,10 @@ public class Persoon {
         return true;//alles goed
     }
     
+    /**
+     * Controleert of het een schrikkeljaar is
+     * @param jaar
+     */
     private boolean isSchrikkeljaar(int jaar){
         return jaar%100 == 0 ? jaar%400 == 0 : jaar%4 == 0;
     }

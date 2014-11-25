@@ -19,16 +19,20 @@ public class Kantine {
     * voor de kassa.
     */
     public void loopPakSluitAan() {
+        //nieuwe objecten aanmaken en persoon dienblad laten pakken
         Persoon persoon = new Persoon();
         Dienblad dienblad = new Dienblad();
         persoon.pakDienblad(dienblad);
         
+        //artikelen aanmaken
         Artikel art1 = new Artikel();
         Artikel art2 = new Artikel();
         
+        //persoon artikelen laten pakken
         persoon.pakArtikel(art1);
         persoon.pakArtikel(art2);
         
+        //persoon laten aansluiten
         kassarij.sluitAchteraan(persoon);
     }
     
