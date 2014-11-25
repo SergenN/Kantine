@@ -1,0 +1,5 @@
+5a
+een while loop loopt door tot de rij leeg is en
+er kunenn nog mensen bij komen terwijl de while loop aan het afrekenen is,
+terwijl er bij een for lus er geen mensen meer bij in de rij kunenn komen. 
+
