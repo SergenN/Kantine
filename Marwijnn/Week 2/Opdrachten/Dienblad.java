@@ -8,7 +8,7 @@
 import java.util.LinkedList;
 
 public class Dienblad{
-    private LinkedList<Artikel> artikelen;
+    private LinkedList<Artikel> artikelen;//Linkedlist? moet stack zijn!
     private int aantalArtikelen;
     private double totaalPrijs;
     
@@ -46,6 +46,6 @@ public class Dienblad{
      * @return De totaalprijs
      */
     public double getTotaalPrijs(){
-        return this.totaalPrijs;
+        return this.totaalPrijs;//Klopt niet zie javadoc
     }
 }

@@ -18,6 +18,7 @@ public class KantineSimulatie {
                 kantine.loopPakSluitAan();
             }
             kantine.verwerkRijVoorKassa();
+            System.out.println("Dag " + (i+1) + ":");
             System.out.println("Artikelen verkocht: " + kantine.aantalArtikelen());
             System.out.println("Omzet van de dag: " + kantine.hoeveelheidGeldInKassa());
             kantine.resetKassa();

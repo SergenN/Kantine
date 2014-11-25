@@ -12,6 +12,7 @@ public class Kassa {
      * Constructor
      */
     public Kassa(KassaRij kassarij){
+        //kassarij nergens vast gezet!
         resetKassa();
     }
     

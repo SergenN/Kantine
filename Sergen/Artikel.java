@@ -23,6 +23,9 @@ public class Artikel {
     }
     
     public void setPrijs(double prijs){
+        if (prijs < 0) {
+            prijs = 0;
+        }
         this.prijs = prijs;
     }
     
@@ -37,5 +40,10 @@ public class Artikel {
     public double getPrijs(){
         return prijs;
     }
+    
+    public void drukAf(){
+        System.out.println("Naam : " + naam + " Prijs : " + prijs);
+    }
+
         
 }

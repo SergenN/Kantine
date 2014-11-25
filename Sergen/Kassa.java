@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 
 public class Kassa {
-    private KassaRij kassaRij;
-    private double geldInKassa = 0;
-    private int artikelenVerkocht = 0;
+    private KassaRij kassarij;
+    private double geldInKassa;
+    private int artikelenVerkocht;
     /**
     * Constructor
     */
     public Kassa(KassaRij kassarij) {
-        this.kassaRij = kassarij;
+        this.kassarij = kassarij;
+        resetKassa();
     }
     
     /**
@@ -18,13 +19,8 @@ public class Kassa {
     * @param persoon die moet afrekenen
     */
     public void rekenAf(Persoon persoon) {
-        int artikelen = persoon.getAantalArtikelen();
-        double prijs = persoon.getTotaalPrijs();
-        
-        System.out.println("ARTS: "+artikelen+"  PRS: "+prijs);
-        
-        geldInKassa += prijs;
-        artikelenVerkocht += artikelen;
+        artikelenVerkocht += persoon.getAantalArtikelen();
+        geldInKassa += persoon.getTotaalPrijs();
     }
     
     /**
