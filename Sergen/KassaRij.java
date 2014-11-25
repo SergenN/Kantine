@@ -25,9 +25,9 @@ public class KassaRij {
     */
     public Persoon eerstePersoonInRij() {
         if(erIsEenRij()){
-            Persoon toreturn = personen.getFirst();
+            Persoon toReturn = personen.getFirst();
             personen.removeFirst();
-            return toreturn;
+            return toReturn;
         }
         return null;
     }

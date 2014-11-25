@@ -8,7 +8,7 @@
 public class Artikel
 {
     // instance variables - replace the example below with your own
-    private int prijs;
+    private int prijs;//double price!
     private String naam;
     
     public Artikel(){

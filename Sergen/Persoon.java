@@ -2,15 +2,15 @@ public class Persoon {
     private long BSN;
     private String voornaam, achternaam;
     private int dag, maand, jaar;
-    private char geslacht = 'N';
+    private char geslacht;
     private Dienblad dienblad;
 
     public Persoon(){
         setVoornaam("Onbekend");
         setAchternaam("Onbekend");
-        setBSN(1111111);
+        setBSN(0);
         setGeboorteDatum(0,0,0);
-        setGeslacht("???");
+        setGeslacht("Onbekend");
     }
     
     public Persoon(long BSN, String voornaam, String achternaam, int dag, int maand, int jaar, String geslacht) {
@@ -74,6 +74,8 @@ public class Persoon {
             this.geslacht = 'M';
         } else if (geslacht.equalsIgnoreCase("vrouw")){
             this.geslacht = 'V';
+        } else {
+            this.geslacht = 'N';
         }
     }
     
@@ -146,6 +148,9 @@ public class Persoon {
     * @return De totaalprijs
     */
     public double getTotaalPrijs() {
+        if (dienblad == null) {
+            return 0;
+        }
         return dienblad.getTotaalPrijs();
     } 
     
@@ -155,6 +160,9 @@ public class Persoon {
     * @return Het aantal artikelen
     */
     public int getAantalArtikelen() {
+        if (dienblad == null) {
+            return 0;
+        }
         return dienblad.getAantalArtikelen();
     }
 }

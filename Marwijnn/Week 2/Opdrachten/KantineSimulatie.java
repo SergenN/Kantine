@@ -11,7 +11,7 @@ public class KantineSimulatie{
      * Constructor
      */
     public KantineSimulatie(){
-        kantine=new Kantine();
+        kantine = new Kantine();
     }
     
     /**
