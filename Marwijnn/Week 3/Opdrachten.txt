@@ -1,0 +1,23 @@
+1.a 
+ - aantalArtikelen()
+ - hoeveelheidGeldInKassa()
+ - resetKassa()
+
+2.a
+Wanneer je ze private maakt kun je niet per ongeluk aanroepen in andere klassen, dit is handig in dit geval omdat andere klassen deze methodes niet nodig gaan hebben.
+
+2.b
+Je gebruikt een hashMap wanneer je een aantal sleutels met toegewezen waardes nodig hebt met, een set kun je gebruiken wanneer je alleen een aantal objecten hebt die je wilt opslaan.
+
+3.a 
+ 1.) initialiseert nieuwe kantine
+ 2.) initialeert random instantieVariabel
+ 3.) maakt een array aan met een aantal random getallen aan
+ 4.) initialiseert kantinaaanbod met artikelen, arikelprijsen en de zojuist geinitialiseerde random getallen
+ 5.) wijst het nieuwe geinitialeerde kantineaanbod toe aan de kantine
+
+3.b
+random.nextInt geeft een waarde tussen 0 en het doorgegeven maximale nummer terug, hier wordt het minimale aantal bij op geteld en terug gegeven. (maar weet niet waarom die 1 er bij moet
+
+
+ 
