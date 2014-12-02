@@ -1,0 +1,9 @@
+1a.
+in kantine class:
+	hoeveelheidGeldInKassa()
+	aantalArtikelen()
+	resetKassa()
+
+in Kassa class
+	kassarij;
+

@@ -1,9 +1,10 @@
-import java.util.ArrayList;
+import java.util.Stack;
 
 public class Kassa {
     private KassaRij kassarij;
     private double geldInKassa;
     private int artikelenVerkocht;
+    
     /**
     * Constructor
     */
@@ -19,8 +20,8 @@ public class Kassa {
     * @param persoon die moet afrekenen
     */
     public void rekenAf(Persoon persoon) {
-        artikelenVerkocht += persoon.getAantalArtikelen();
-        geldInKassa += persoon.getTotaalPrijs();
+        artikelenVerkocht += getAantalArtikelen(persoon);
+        geldInKassa += getTotaalPrijs(persoon);
     }
     
     /**
@@ -52,6 +53,28 @@ public class Kassa {
     public void resetKassa() {
         geldInKassa = 0;
         artikelenVerkocht = 0;
+    }
+    
+   /**
+    * Methode om aantal artikelen op dienblad te tellen
+    * @return Het aantal artikelen 
+    */
+    public int getAantalArtikelen(Persoon persoon) {
+        return persoon.getDienblad().getArtikelen().size();
+    }
+    
+    /**
+    * Methode om de totaalprijs van de artikelen 
+    * op dienblad uit te rekenen
+    * @return De totaalprijs
+    */
+    public double getTotaalPrijs(Persoon persoon) {
+        int prijs = 0;
+        Stack<Artikel> artikelen = persoon.getDienblad().getArtikelen();
+        for(Artikel a : artikelen){
+            prijs += a.getPrijs();
+        }
+        return prijs;
     }
 }
 

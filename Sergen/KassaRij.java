@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class KassaRij {
-    private LinkedList<Persoon> personen;
+    public LinkedList<Persoon> personen;
     /**
     * Constructor
     */
@@ -37,6 +37,6 @@ public class KassaRij {
     * @return Of er wel of geen rij bestaat
     */
     public boolean erIsEenRij() {
-        return (personen.size() <= 0);
+        return (personen.size() > 0);
     }
 }
