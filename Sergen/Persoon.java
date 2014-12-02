@@ -195,6 +195,10 @@ public class Persoon {
         this.dienblad = dienblad;
     }
     
+    /**
+     * verkrijg de dienblad die persoon heeft gepakt. 
+     * @return Dienblad, null als het nog niet gezet is.
+     */
     public Dienblad getDienblad(){
         return dienblad;
     }

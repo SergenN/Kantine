@@ -18,7 +18,11 @@ public class Dienblad {
         artikelen.push(artikel);
     }
     
-    public Stack getArtikelen(){
+    /**
+     * verkrijg alle artikelen op het dienblad.
+     * @return Stack<artikelen>
+     */
+    public Stack<Artikel> getArtikelen(){
         return artikelen;
     }
 }

@@ -75,6 +75,11 @@ public class KantineAanbod {
         } 
     }
     
+    /**
+     * verkrijg de voorraad van een bepaalde artikel
+     * @param productnaam waarvan je het aantal artikelen wilt weten
+     * @return int artikelen
+     */
     public int getVooraad(String productnaam){
         ArrayList<Artikel> artikelen = getArrayList(productnaam);
         if (artikelen == null){

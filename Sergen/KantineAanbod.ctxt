@@ -16,4 +16,5 @@ comment4.target=void\ vooraadAanvullen(java.lang.String,\ int)
 comment4.text=\r\n\ methode\ om\ vooraad\ van\ artikelen\ aan\ te\ vullen\r\n\ @param\ productnaam\ de\ naam\ van\ het\ product\ om\ aantevullen\r\n\ @param\ aantal\ aantal\ artikelen\ om\ toe\ te\ voegen\r\n
 comment5.params=productnaam
 comment5.target=int\ getVooraad(java.lang.String)
+comment5.text=\r\n\ verkrijg\ de\ voorraad\ van\ een\ bepaalde\ artikel\r\n\ @param\ productnaam\ waarvan\ je\ het\ aantal\ artikelen\ wilt\ weten\r\n\ @return\ int\ artikelen\r\n
 numComments=6

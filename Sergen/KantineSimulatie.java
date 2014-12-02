@@ -43,8 +43,7 @@ public class KantineSimulatie {
     }
     
     /**
-    * Methode om een array van random getallen liggend tussen min en
-    max
+    * Methode om een array van random getallen liggend tussen min en max
     * van de gegeven lengte te genereren
     * @param lengte
     * @param min
@@ -128,6 +127,9 @@ public class KantineSimulatie {
         }
     }
     
+    /**
+     * check of alle artikelen nog op voorraad zijn, zo niet dan aanvullen.
+     */
     private void aantalBijwerken(){
         for(int i = 0; i < artikelnamen.length; i++){
             if (kantine.getKantineAanbod().getVooraad(artikelnamen[i]) < MIN_ARTIKELEN_PER_SOORT) {

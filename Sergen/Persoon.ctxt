@@ -25,6 +25,7 @@ comment15.target=void\ pakDienblad(Dienblad)
 comment15.text=\r\n\ Methode\ om\ dienblad\ te\ koppelen\ aan\ een\ persoon\r\n\ @param\ dienblad\r\n
 comment16.params=
 comment16.target=Dienblad\ getDienblad()
+comment16.text=\r\n\ verkrijg\ de\ dienblad\ die\ persoon\ heeft\ gepakt.\ \r\n\ @return\ Dienblad,\ null\ als\ het\ nog\ niet\ gezet\ is.\r\n
 comment2.params=
 comment2.target=void\ drukAf()
 comment2.text=\r\n\ Drukt\ alle\ gegevens\ af\ op\ het\ scherm\r\n

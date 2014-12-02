@@ -1,9 +1,3 @@
-/**
- * Write a description of class Artikel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Artikel {
     private double prijs;
     private String naam;
@@ -11,7 +5,6 @@ public class Artikel {
     /**
      * Constructor for objects of class Artikel
      */
-    
     public Artikel(){
         setPrijs(1);
         setNaam("Onbekend");
@@ -63,6 +56,4 @@ public class Artikel {
     public void drukAf(){
         System.out.println("Naam : " + naam + " Prijs : " + prijs);
     }
-
-        
 }
