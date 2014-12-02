@@ -44,6 +44,14 @@ public class KantineAanbod {
                 artikelen.add(new Artikel(productnaam, prijs));
             } 
     }
+    
+    public int getVooraad(String productnaam){
+        ArrayList<Artikel> artikelen = getArrayList(productnaam);
+        if (artikelen == null) return 0;
+        
+        return artikelen.size();
+    }
+    
     /**
      * Private methode om een Artikel van de stapel artikelen af te pakken. 
      * Retourneert null als de stapel leeg is.

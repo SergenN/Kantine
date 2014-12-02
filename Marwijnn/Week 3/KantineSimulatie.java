@@ -97,7 +97,7 @@ public class KantineSimulatie {
     for(int i=0;i<dagen;i++) {
       System.out.println("Dag " + (i + 1));
       // bedenk hoeveel personen vandaag binnen lopen
-      int aantalpersonen= getRandomValue(2,8);
+      int aantalpersonen= getRandomValue(MIN_PERSONEN_PER_DAG, MAX_PERSONEN_PER_DAG);
       
         // laat de personen maar komen...
         for(int j=0;j<aantalpersonen;j++) {
@@ -108,7 +108,7 @@ public class KantineSimulatie {
             Dienblad dienblad = new Dienblad();
             persoon.pakDienblad(dienblad);
           
-          int aantalartikelen= getRandomValue(1,3);
+          int aantalartikelen= getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);
 
             // genereer de “artikelnummers”, dit zijn indexen 
             // van de artikelnamen array 
@@ -136,6 +136,30 @@ public class KantineSimulatie {
       
       // reset de kassa voor de volgende dag
       kantine.getKassa().resetKassa();
+      aantalBijwerken();
     }
   }
+  
+  private void aantalBijwerken(){
+      for(int i = 0; i < artikelnamen.length; i++){
+          if (kantine.getKantineAanbod().getVooraad(artikelnamen[i]) < MIN_ARTIKELEN_PER_SOORT)
+            kantine.getKantineAanbod().vooraadAanvullen(artikelnamen[i], 10000);
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

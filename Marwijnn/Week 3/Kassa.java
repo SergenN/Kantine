@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.math.BigDecimal;
 
 public class Kassa {
     private KassaRij kassarij;
@@ -24,7 +25,10 @@ public class Kassa {
         Iterator<Artikel> iterator = persoon.getDienblad().
                                              getArtikelIterator();
         while(iterator.hasNext()){
-                  geldInKassa += iterator.next().getPrijs();
+                  geldInKassa = BigDecimal.valueOf(geldInKassa).add(
+                    BigDecimal.valueOf(
+                              iterator.next().getPrijs())
+                    ).doubleValue();
                   artikelenVerkocht++;
              }
     }
