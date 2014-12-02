@@ -1,4 +1,5 @@
 import java.util.*;
+import java.text.*;
 
 public class KantineSimulatie {
     // kantine
@@ -119,7 +120,8 @@ public class KantineSimulatie {
             // druk de dagtotalen af en hoeveel personen binnen zijn gekomen
             System.out.println("Hoeveelheid personen binnengekomen: " + aantalpersonen);
             System.out.println("Hoeveelheid Artikelen verkocht: " + kantine.getKassa().aantalArtikelen());
-            System.out.println("Hoeveelheid geld verdiend: " + kantine.getKassa().hoeveelheidGeldInKassa() + "\n");
+            DecimalFormat f = new DecimalFormat("##.00");
+            System.out.println("Hoeveelheid geld verdiend: €" + f.format(kantine.getKassa().hoeveelheidGeldInKassa()) + "\n");
             
             // reset de kassa voor de volgende dag
             kantine.getKassa().resetKassa();

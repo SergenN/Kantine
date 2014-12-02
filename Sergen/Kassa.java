@@ -69,7 +69,7 @@ public class Kassa {
     * @return De totaalprijs
     */
     public double getTotaalPrijs(Persoon persoon) {
-        int prijs = 0;
+        double prijs = 0;
         Stack<Artikel> artikelen = persoon.getDienblad().getArtikelen();
         for(Artikel a : artikelen){
             prijs += a.getPrijs();
