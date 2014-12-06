@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=KantineMedewerker()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ KantineMedewerker\r\n
+comment1.params=medewerkersnummer
+comment1.target=void\ setMedewerkersnummer(int)
+comment1.text=\r\n\ Methode\ om\ het\ medewerkersnummer\ toe\ te\ wijzen\r\n\ @param\ medewerkersnummer\r\n
+comment2.params=
+comment2.target=int\ getMedewerkersnummer()
+comment2.text=\r\n\ Methode\ om\ het\ medewerkersnummer\ op\ te\ halen\r\n\ @return\ medewerkersnummer\r\n
+comment3.params=
+comment3.target=boolean\ magAchterKassa()
+comment3.text=\r\n\ Methode\ om\ te\ controleren\ of\ kantine\ medewerker\ acher\ de\ kassa\ mag\ staan\r\n\ @return\ magachterkassa\r\n
+comment4.params=magachterkassa
+comment4.target=void\ magAchterKassa(boolean)
+comment4.text=\r\n\ Methode\ om\ toetewijzen\ of\ medewerker\ achter\ kassa\ mag\r\n\ @param\ magachterkassa\r\n
+comment5.params=
+comment5.target=void\ drukAf()
+comment5.text=\r\n\ Methode\ om\ de\ gegevens\ van\ KantineMedewerker\ op\ het\ scherm\ af\ te\ drukken\r\n
+numComments=6

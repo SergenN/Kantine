@@ -1,0 +1,25 @@
+Week 4
+
+1.c 
+wanneer er geen constructor is wordt de default constuctor aangeroepen,
+deze wordt automatisch gegenereerd door de compiler als er geen constructor
+gedifineerd is.
+
+
+1.d
+deze 2 methodes zijn onafhankelijk van de klasse en kunnen daarom static zijn,
+want ze oefenen geen effect ui op een instantie van de klasse.
+
+1.e
+Als de methodes private zijn kunnen ze alleen maar gezien worden door dezelfde
+klasse.
+
+1.i
+dit komt omdat je met een static functie niet een non-static functie mag aanroepen
+
+1.j
+het is nu geen constante variabel meer
+
+2.b
+zodat eers de constructor van de super class aangeroepen wordt, wanneer dit eerst
+gebeurt voorkomt dit null pointer exceptions.

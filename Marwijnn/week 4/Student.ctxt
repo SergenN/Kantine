@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Student()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Student\r\n
+comment1.params=studentnummer
+comment1.target=void\ setStudentnummer(int)
+comment1.text=\r\n\ methode\ om\ het\ studentnummer\ toetewijzen\r\n\ @param\ studentnummer\r\n
+comment2.params=
+comment2.target=int\ getStudentnummer()
+comment2.text=\r\n\ methode\ om\ het\ studentnummer\ optehalen\r\n\ @return\ studentnummer\r\n
+comment3.params=studierichting
+comment3.target=void\ setStudierichting(java.lang.String)
+comment3.text=\r\n\ methode\ om\ de\ studierichting\ aantewijzen\r\n\ @param\ studierichting\r\n
+comment4.params=
+comment4.target=java.lang.String\ getStudierichting()
+comment4.text=\r\n\ methode\ om\ de\ studierichting\ op\ te\ halen\r\n\ @return\ studierichting\r\n
+comment5.params=
+comment5.target=void\ drukAf()
+comment5.text=\r\n\ Methode\ om\ de\ gegevens\ van\ Student\ op\ het\ scherm\ af\ te\ drukken\r\n
+numComments=6

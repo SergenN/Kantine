@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Kantine()
+comment0.text=\r\n\ Constructor\r\n
+comment1.params=
+comment1.target=KantineAanbod\ getKantineAanbod()
+comment1.text=\r\n\ In\ deze\ methode\ wordt\ het\ Kantine\ Aanbod\ opgehaalt\r\n\ @return\ Kantine\ Aanbod\r\n
+comment2.params=kantineaanbod
+comment2.target=void\ setKantineAanbod(KantineAanbod)
+comment2.text=\r\n\ In\ deze\ methode\ wordt\ het\ kantine\ aanbod\ toegewezen\r\n\ @param\ kantineaanbod\ \r\n
+comment3.params=
+comment3.target=void\ verwerkRijVoorKassa()
+comment3.text=\r\n\ Deze\ methode\ handelt\ de\ rij\ voor\ de\ kassa\ af.\r\n
+comment4.params=
+comment4.target=void\ loopPakSluitAan()
+comment4.text=\r\n\ In\ deze\ methode\ wordt\ een\ Persoon\ en\ Dienblad\r\n\ gemaakt\ en\ aan\ elkaar\r\n\ gekoppeld.\ Maak\ twee\ Artikelen\ aan\ en\ plaats\ \r\n\ deze\ op\ het\ dienblad.\ \ \ \r\n\ Tenslotte\ sluit\ de\ Persoon\ zich\ aan\ bij\ de\ rij\ \r\n\ voor\ de\ kassa.\r\n
+comment5.params=persoon\ artikelnamen
+comment5.target=void\ loopPakSluitAan(Persoon,\ java.lang.String[])
+comment5.text=\r\n\ In\ deze\ methode\ kiest\ een\ Persoon\ met\ een\ dienblad\r\n\ de\ artikelen\ in\ artikelnamen.\r\n\ @param\ persoon\r\n\ @artikelnamen\r\n
+comment6.params=
+comment6.target=Kassa\ getKassa()
+comment6.text=\r\n\ Deze\ methode\ haalt\ de\ kassa\ op\r\n\ @return\ de\ kassa\r\n
+numComments=7
