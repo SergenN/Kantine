@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Student()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Student\r\n
+comment1.params=BSN\ voornaam\ achternaam\ dag\ maand\ jaar\ geslacht\ studentnummer\ studierichting
+comment1.target=Student(long,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ java.lang.String,\ int,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Student\r\n
+comment2.params=studentnummer
+comment2.target=void\ setStudentnummer(int)
+comment2.text=\r\n\ verander\ de\ studentnummer\ van\ dit\ object\r\n\ @param\ studentnummer\ nieuwe\ studentnummer\r\n
+comment3.params=
+comment3.target=int\ getStudentnummer()
+comment3.text=\r\n\ verkrijg\ de\ studentnummer\ van\ dit\ object\r\n\ @return\ studentnummer\ van\ het\ object\r\n
+comment4.params=studierichting
+comment4.target=void\ setStudierichting(java.lang.String)
+comment4.text=\r\n\ verander\ de\ studierichting\ van\ dit\ object\r\n\ @param\ studierichting\ nieuwe\ studierichting\r\n
+comment5.params=
+comment5.target=java.lang.String\ getStudierichting()
+comment5.text=\r\n\ verkrijg\ de\ studierichting\ van\ dit\ object\r\n\ @return\ studierichting\ van\ het\ object\r\n
+comment6.params=
+comment6.target=void\ drukAf()
+comment6.text=\r\n\ druk\ de\ studierichting\ en\ studentnummer\ van\ dit\ object\ af\r\n
+numComments=7

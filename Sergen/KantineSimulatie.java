@@ -28,6 +28,11 @@ public class KantineSimulatie {
     private static final int MIN_PERSONEN_PER_DAG = 50;
     private static final int MAX_PERSONEN_PER_DAG = 100;
     
+    // minimum en maximum aantal personen per dag
+    private static final int AANTAL_STUDENTEN = 89;
+    private static final int AANTAL_DOCENTEN = 10;
+    private static final int AANTAL_MEDEWERKERS = 1;
+    
     // minimum en maximum artikelen per persoon
     private static final int MIN_ARTIKELEN_PER_PERSOON = 1;
     private static final int MAX_ARTIKELEN_PER_PERSOON = 4;
@@ -90,14 +95,28 @@ public class KantineSimulatie {
     * @param dagen
     */
     public void simuleer(int dagen) {
-        // for lus voor dagen
+        
+        DecimalFormat f = new DecimalFormat("##.00");
+        double[] dagOmzet = new double[dagen];
+        int[] aantalVerkocht = new int[dagen];
+        
         for(int i = 0; i < dagen; i++) {
-            // bedenk hoeveel personen vandaag binnen lopen
             int aantalpersonen = getRandomValue(MIN_PERSONEN_PER_DAG, MAX_PERSONEN_PER_DAG);
-            // laat de personen maar komen...
+            
             for(int j = 0; j < aantalpersonen; j++) {
-                // maak persoon en dienblad aan, koppel ze
-                Persoon persoon = new Persoon();
+                
+                Persoon persoon = null;
+                int kans = getRandomValue(1, 100);
+                if (kans == 1){
+                    persoon = new KantineMedewerker();
+                } else if (kans <= 11) {
+                    persoon = new Docent();
+                } else {
+                    persoon = new Student();
+                }
+                
+                persoon.drukAf();
+                
                 Dienblad dienblad = new Dienblad();
                 persoon.pakDienblad(dienblad);
                 
@@ -117,16 +136,27 @@ public class KantineSimulatie {
             // verwerk rij voor de kassa
             kantine.verwerkRijVoorKassa();
             
+            aantalVerkocht[i] = kantine.getKassa().aantalArtikelen();
+            dagOmzet[i] = kantine.getKassa().hoeveelheidGeldInKassa();
+            
             // druk de dagtotalen af en hoeveel personen binnen zijn gekomen
             System.out.println("Hoeveelheid personen binnengekomen: " + aantalpersonen);
             System.out.println("Hoeveelheid Artikelen verkocht: " + kantine.getKassa().aantalArtikelen());
-            DecimalFormat f = new DecimalFormat("##.00");
             System.out.println("Hoeveelheid geld verdiend: €" + f.format(kantine.getKassa().hoeveelheidGeldInKassa()) + "\n");
             
             // reset de kassa voor de volgende dag
             kantine.getKassa().resetKassa();
             aantalBijwerken();
         }
+        
+        System.out.println("Gemiddelde hoeveelheid artikelen verkocht: " + Administratie.berekenGemiddeldAantal(aantalVerkocht));
+        System.out.println("Gemiddelde hoeveelheid omzet gemaakt: €" + f.format(Administratie.berekenGemiddeldeOmzet(dagOmzet)));
+        System.out.println("Gemiddelde omzet per dag: ");
+        double[] gemiddeldeDagOmzet = Administratie.berekenDagOmzet(dagOmzet);
+        for (int i = 0; i < gemiddeldeDagOmzet.length; i++){
+            System.out.println("Dag " + (i + 1) + ": €" + f.format(gemiddeldeDagOmzet[i]));
+        }
+        
     }
     
     /**

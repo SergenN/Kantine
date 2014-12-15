@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=KantineMedewerker()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ KantineMedewerker\r\n
+comment1.params=BSN\ voornaam\ achternaam\ dag\ maand\ jaar\ geslacht\ medewerkersnummer\ kassaGeshikt
+comment1.target=KantineMedewerker(long,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ java.lang.String,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ KantineMedewerker\r\n
+comment2.params=
+comment2.target=int\ getMedewerkersnummer()
+comment2.text=\r\n\ Verkrijg\ de\ medewerkers\ nummer\ van\ dit\ object\r\n\ @return\ medewerkersnummer\ \ \ \ nummer\ van\ medewerker\r\n
+comment3.params=medewerkersnummer
+comment3.target=void\ setMedewerkersnummer(int)
+comment3.text=\r\n\ Wijzig\ de\ medewerkersnummer\ van\ dit\ object\r\n\ @param\ medewerkersnummer\ \r\n
+comment4.params=
+comment4.target=boolean\ isKassaGeschikt()
+comment4.text=\r\n\ Check\ of\ dit\ object\ kassageschikt\ is\ (achter\ de\ kassa\ mag)\r\n\ @return\ kassaGeschikt\ true\ als\ de\ medewerker\ achter\ de\ kassa\ mag\ staan\r\n
+comment5.params=kassaGeschikt
+comment5.target=void\ setKassaGeschikt(boolean)
+comment5.text=\r\n\ wijzig\ de\ kassageschiktheid\ van\ dit\ object\r\n\ @param\ kassaGeschikt\ true\ als\ de\ medewerker\ achter\ de\ kassa\ mag\ staan\r\n
+comment6.params=
+comment6.target=void\ drukAf()
+comment6.text=\r\n\ Druk\ de\ kassageschiktheid\ en\ medewerkersnummer\ van\ dit\ object\ af\r\n
+numComments=7

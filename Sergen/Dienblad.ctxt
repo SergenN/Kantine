@@ -6,6 +6,6 @@ comment1.params=artikel
 comment1.target=void\ voegToe(Artikel)
 comment1.text=\r\n\ Methode\ om\ artikel\ aan\ dienblad\ toe\ te\ voegen\r\n\ @param\ artikel\r\n
 comment2.params=
-comment2.target=java.util.Stack\ getArtikelen()
+comment2.target=java.util.Iterator\ getArtikelen()
 comment2.text=\r\n\ verkrijg\ alle\ artikelen\ op\ het\ dienblad.\r\n\ @return\ Stack<artikelen>\r\n
 numComments=3

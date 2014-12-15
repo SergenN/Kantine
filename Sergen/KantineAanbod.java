@@ -63,9 +63,7 @@ public class KantineAanbod {
      * @param aantal aantal artikelen om toe te voegen
      */
     public void vooraadAanvullen(String productnaam, int aantal){
-        if (aantal <= 0) {
-            return;
-        }
+        if (aantal <= 0) return;
         
         ArrayList<Artikel> artikelen = getArrayList(productnaam);
         double prijs = artikelen.get(0).getPrijs();

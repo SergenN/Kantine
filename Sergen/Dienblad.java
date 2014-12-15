@@ -1,4 +1,4 @@
-import java.util.Stack;
+import java.util.*;
 
 public class Dienblad {
     private Stack<Artikel> artikelen;
@@ -22,7 +22,7 @@ public class Dienblad {
      * verkrijg alle artikelen op het dienblad.
      * @return Stack<artikelen>
      */
-    public Stack<Artikel> getArtikelen(){
-        return artikelen;
+    public Iterator<Artikel> getArtikelen(){
+        return artikelen.iterator();
     }
 }

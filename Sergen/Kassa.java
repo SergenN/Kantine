@@ -1,4 +1,4 @@
-import java.util.Stack;
+import java.util.*;
 
 public class Kassa {
     private KassaRij kassarij;
@@ -60,7 +60,13 @@ public class Kassa {
     * @return Het aantal artikelen 
     */
     public int getAantalArtikelen(Persoon persoon) {
-        return persoon.getDienblad().getArtikelen().size();
+        int i = 0;
+        Iterator<Artikel> artikelen = persoon.getDienblad().getArtikelen();
+        while(artikelen.hasNext()) {
+            i++;
+            artikelen.next();
+        }
+        return i;
     }
     
     /**
@@ -70,9 +76,10 @@ public class Kassa {
     */
     public double getTotaalPrijs(Persoon persoon) {
         double prijs = 0;
-        Stack<Artikel> artikelen = persoon.getDienblad().getArtikelen();
-        for(Artikel a : artikelen){
-            prijs += a.getPrijs();
+        Iterator<Artikel> artikelen = persoon.getDienblad().getArtikelen();
+        while(artikelen.hasNext()){
+            Artikel artikel = artikelen.next();
+            prijs += artikel.getPrijs();
         }
         return prijs;
     }
