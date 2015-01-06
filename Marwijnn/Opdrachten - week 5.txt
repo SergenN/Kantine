@@ -31,7 +31,8 @@ Ja
 
 5.f
 Ja, deze methodes moeten allemaal overschreven worden het zelfde geldt voor een
-abstracte methode. 
+abstracte methode.
+//In java 8 kun je static methodes in een interface hebben dus nee?
 
 5.g
 Ja, deze methodes kunnen niet aangeroepen worden als en non-abstracte klasse
@@ -107,8 +108,6 @@ Een final methode zorgt er voor dat de methode niet aangepast kan worden door ee
 subklasse, dus kan niet overschreden worden. Een abstracte methode moet juist
 overschreden worden. Je kan niet een methode hebben die en overschreden moet worden en
 die tegelijker tijd niet overschreden mag worden.
-
-
 
 
 

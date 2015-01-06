@@ -51,31 +51,20 @@ Je moet eerst de constructor van de super klasse aanroepen want dit voorkomt nul
 
 
 Week 5
-1a test?
-1b test? 
 1c er komt valse uit want de objecten zijn niet iedentiek.
 1d equals want een string is een object en equals checkt of alle data in het object overeenkomt terwijl == checkt of de twee objecten identiek zijn
 
-2a OK
-2b MAAK DIAGRAM
 2c omdat zo de klasses die betaalwijze implementeren zo wel gebruik kunnen maken van variabele saldo
-2d OK
-2e OK
-
-3a OK
-3b OK
-
-4a MAAK DIAGRAM
 
 5a nee je kunt geen instantie maken van een interface via new omdat abstracte klasses een "template" zijn. Je kunt dus de methoden niet aanroepen (ook de constructor niet). 
 5b nee je kunt ook geen instantie maken van een abstracte klasse via new
 5c/d een klasse kan meerdere klassen implementeren maar 1 klasse extenden 
 5e ja dat kan
 5f nee want je kunt ook een public static methode in deze klasse hebben.
-5g nee dat kan niet omdat andere klasses deze methode niet kunnen implementeren omdat de klasse geen interface is.
+5g Ja dat kan moet omdat andere klasses deze methode moeten kunnen implementeren.
 5h ?
 
-6a Ja want dna geef je alleen aan dat er geen instantie kan worden gemaakt van deze klasse
+6a Ja want dan geef je alleen aan dat er geen instantie kan worden gemaakt van deze klasse
 6b Ja dat moet omdat --UITLEG--
 6c je kunt de subklasse abstract maken om deze probleem te voorkomen. dit is logisch omdat --UITLEG--
 6d ?
