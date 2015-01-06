@@ -30,11 +30,12 @@ public class Kassa {
             }
         }
         
-        if (persoon.getBetaalwijze().betaal(prijs - korting)){
+        try {
+            persoon.getBetaalwijze().betaal(prijs - korting);
             artikelenVerkocht += getAantalArtikelen(persoon);
             geldInKassa += getTotaalPrijs(persoon);
-        } else {
-            System.out.println("Persoon kon niet betalen!");
+        }catch(TeWeinigGeldException e){
+            System.out.println(e.getMessage());
         }
     }
     

@@ -3,12 +3,12 @@ public class Contant extends Betaalwijze {
     /**
      * Methode om betaling af te handelen
      */
-    public boolean betaal(double tebetalen) {
+    public void betaal(double tebetalen) throws TeWeinigGeldException {
         if (saldo >= tebetalen){
             setSaldo(saldo - tebetalen);
-            return true;
+            return;
         }
-        return false;
+        throw new TeWeinigGeldException("Te weinig geld!");
     }
     
 }
