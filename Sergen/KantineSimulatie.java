@@ -115,7 +115,7 @@ public class KantineSimulatie {
                     persoon = new Student();
                 }
                 
-                persoon.drukAf();
+                System.out.println(persoon.toString());
                 
                 Dienblad dienblad = new Dienblad();
                 persoon.pakDienblad(dienblad);

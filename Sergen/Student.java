@@ -53,12 +53,18 @@ public class Student extends Persoon {
         return studierichting;
     }
     
+    /*
     /**
      * druk de studierichting en studentnummer van dit object af
-     */
+     *
     @Override
     public void drukAf(){
         System.out.println("Studierichting: " + getStudierichting());
-        System.out.println("Studentnummer: " + getStudentnummer());
+        System.out.println("Studentnummer: " + getStudentnummer();
+    }*/
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\nStudierichting: " + getStudierichting() + "\nStudentnummer: " + getStudentnummer();
     }
 }

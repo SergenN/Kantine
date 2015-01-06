@@ -1,7 +1,10 @@
-public class KantineMedewerker extends Persoon {
+public class KantineMedewerker extends Persoon implements KortingskaartHouder{
     
     private int medewerkersnummer;
     private boolean kassaGeschikt;
+    private double kortingPercentage;
+    private boolean heeftMaximum;
+    private double maximum;
     
     /**
      * Constructor for objects of class KantineMedewerker
@@ -53,12 +56,37 @@ public class KantineMedewerker extends Persoon {
         this.kassaGeschikt = kassaGeschikt;
     }
     
-    /**
+    /*
      * Druk de kassageschiktheid en medewerkersnummer van dit object af
-     */
+     *
     @Override
     public void drukAf(){
         System.out.println("Medewerkersnummer: " + getMedewerkersnummer());
         System.out.println("Kan achter de kassa: " + isKassaGeschikt());
+    }*/
+    @Override
+    public String toString(){
+        return super.toString() + "\nMedewerkersnummer: " + getMedewerkersnummer() + "/nKan achter de kassa: " + isKassaGeschikt();
+    }
+    
+    /**
+     * methode om kortingspercentage op te vragen
+     */
+    public double geefKortingsPercentage(){
+        return kortingPercentage;
+    }
+    
+    /**
+     * methode om op te vragen of er maximum per keer aan de korting zit
+     */
+    public boolean heeftMaximum(){
+        return heeftMaximum;
+    }
+    
+    /**
+     * methode om het maximum kortingsbedrag op te vragen
+     */
+    public double geefMaximum(){
+        return maximum;
     }
 }

@@ -1,7 +1,10 @@
-public class Docent extends Persoon{
+public class Docent extends Persoon implements KortingskaartHouder{
     
     private String afkorting;
     private String afdeling;
+    private double kortingPercentage;
+    private boolean heeftMaximum;
+    private double maximum;
     
     /**
      * Constructor for objects of class Docent
@@ -53,12 +56,38 @@ public class Docent extends Persoon{
         this.afkorting = afkorting;
     }
     
-    /**
+    /*
      * druk de afkorting en afdeling van dit object af
-     */
+     *
     @Override
     public void drukAf(){
         System.out.println("afkorting: " + getAfkorting());
         System.out.println("afdeling: " + getAfdeling());
+    }*/
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\nAfkorting: " + getAfkorting() + "/nAfdeling: " + getAfdeling();
+    }
+    
+    /**
+     * methode om kortingspercentage op te vragen
+     */
+    public double geefKortingsPercentage(){
+        return kortingPercentage;
+    }
+    
+    /**
+     * methode om op te vragen of er maximum per keer aan de korting zit
+     */
+    public boolean heeftMaximum(){
+        return heeftMaximum;
+    }
+    
+    /**
+     * methode om het maximum kortingsbedrag op te vragen
+     */
+    public double geefMaximum(){
+        return maximum;
     }
 }

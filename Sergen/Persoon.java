@@ -4,6 +4,7 @@ public class Persoon {
     private int dag, maand, jaar;
     private char geslacht;
     private Dienblad dienblad;
+    private Betaalwijze betaalwijze;
     
     /**
      * Construct
@@ -26,15 +27,19 @@ public class Persoon {
         setGeslacht(geslacht);
     }
     
-    /**
+    /*
      * Drukt alle gegevens af op het scherm
-     */
+     *
     public void drukAf(){
         System.out.println("Voornaam: "+ getVoornaam());
         System.out.println("Achternaam: "+ getAchternaam());
         System.out.println("GeboorteDatum: "+ getGeboorteDatum());
         System.out.println("Geslacht: "+ getGeslacht());
         System.out.println("Burgerserivenummer: "+ getBSN());
+    }*/
+    @Override
+    public String toString(){
+        return "Voornaam: "+ getVoornaam() + "\nAchternaam: "+ getAchternaam() + "\nGeboorteDatum: "+ getGeboorteDatum() + "\nGeslacht: "+ getGeslacht() + "\nBurgerserivenummer: "+ getBSN();
     }
     
     /**
@@ -201,5 +206,34 @@ public class Persoon {
      */
     public Dienblad getDienblad(){
         return dienblad;
+    }
+    
+    /**
+     * Check of dit object gelijk is aan het obgegeven object
+     * @param Object, persoon dat vergeleken moet worden
+     */
+    @Override
+    public boolean equals(Object object){
+        if (object instanceof Persoon){
+            Persoon persoon = (Persoon)object;
+            return persoon.getBSN() == getBSN();
+        }
+        return false;
+    }
+    
+    /**
+     * verkrijg de betaalwijze van dit persoon
+     * @return Betaalwijze
+     */
+    public Betaalwijze getBetaalwijze(){
+        return betaalwijze;
+    }
+    
+    /**
+     * Zet de betaalwijze van dit persoon
+     * @param betaalwijze
+     */
+    public void setBetaalwijze(Betaalwijze betaalwijze){
+        this.betaalwijze = betaalwijze;
     }
 }

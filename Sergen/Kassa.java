@@ -20,8 +20,22 @@ public class Kassa {
     * @param persoon die moet afrekenen
     */
     public void rekenAf(Persoon persoon) {
-        artikelenVerkocht += getAantalArtikelen(persoon);
-        geldInKassa += getTotaalPrijs(persoon);
+        double prijs = getTotaalPrijs(persoon);
+        double korting = 0;
+        if (persoon instanceof KortingskaartHouder) {
+            KortingskaartHouder houder = (KortingskaartHouder)persoon;
+            korting = prijs - (prijs / 100 * houder.geefKortingsPercentage());
+            if (houder.heeftMaximum() && (korting > houder.geefMaximum())){
+                korting = houder.geefMaximum();
+            }
+        }
+        
+        if (persoon.getBetaalwijze().betaal(prijs - korting)){
+            artikelenVerkocht += getAantalArtikelen(persoon);
+            geldInKassa += getTotaalPrijs(persoon);
+        } else {
+            System.out.println("Persoon kon niet betalen!");
+        }
     }
     
     /**
