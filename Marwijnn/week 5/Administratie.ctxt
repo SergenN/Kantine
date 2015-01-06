@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=aantal
+comment0.target=double\ berekenGemiddeldAantal(int[])
+comment1.params=omzet
+comment1.target=double\ berekenGemiddeldeOmzet(double[])
+comment1.text=\r\n\ Deze\ methode\ berekent\ van\ de\ double\ array\ omzet\ de\r\n\ gemiddelde\ waarde\r\n\ @param\ omzet\r\n\ @return\ Het\ gemiddelde\r\n
+comment2.params=omzet
+comment2.target=double[]\ berekenDagOmzet(double[])
+comment2.text=\r\n\ Methode\ om\ dagomzet\ uit\ te\ rekenen\r\n\ @param\ omzet\r\n\ @return\ array\ (7\ elementen)\ met\ dagomzetten\r\n
+numComments=3

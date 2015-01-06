@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Docent()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Docent\r\n
+comment1.params=afkorting
+comment1.target=void\ setAfkorting(java.lang.String)
+comment1.text=\r\n\ Methode\ om\ afkorting\ toe\ te\ wijzen\r\n\ @oaram\ afkorting\r\n
+comment2.params=
+comment2.target=java.lang.String\ getAfkorting()
+comment2.text=\r\n\ Methode\ om\ afkoritng\ op\ te\ halen\r\n\ @return\ afkorting\r\n
+comment3.params=afdeling
+comment3.target=void\ setAfdeling(java.lang.String)
+comment3.text=\r\n\ Methode\ om\ afdeling\ toe\ te\ wijzen\r\n\ @param\ afdeling\r\n
+comment4.params=
+comment4.target=java.lang.String\ getAfdeling()
+comment4.text=\r\n\ Methode\ om\ afdeling\ op\ te\ halen\r\n\ @return\ afdeling\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ Methode\ om\ de\ gegevens\ van\ Docent\ op\ te\ halen\ in\ de\ vorm\ van\ een\ string\r\n\ @return\ gegevens\ van\ Docent\r\n
+comment6.params=
+comment6.target=double\ geefKortingsPercentage()
+comment7.params=
+comment7.target=boolean\ heeftMaximum()
+comment8.params=
+comment8.target=double\ geefMaximum()
+numComments=9

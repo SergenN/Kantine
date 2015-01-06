@@ -1,0 +1,125 @@
+1.c
+
+de == controleert of de het zelfde, en controlleert ook of ze de zelfde instantie zijn.
+
+1.d
+je moet equals(Object object) gebruiken want het zijn 2 verschillende instanties en je
+wilt controleren of het de zelfde content heeft, en niet of het de zelfde instantie is
+
+2.c
+Zodat alleen de klas zelf en de klassen die de klas betaalwijze extenden er bij kunnen.
+Dit is handig omdat je er dan binnen subklassen geen getters of setters hoeft te 
+gebruiken want je kunt er direct bij.
+
+5.a 
+Nee, je kunt ze alleen implementeren bij klassen, de interface heeft ook alleen maar
+methodes zonder functionaliteit dus je kan deze methodes dan ook niet aanroepen als 
+je er wel een instance van kon maken met new.
+
+5.b 
+Nee, in een abstracte klas kunnen methodes voor komen zonder functionaliteit net zoals 
+bij een interface en deze methodes kan je ook bij een abstracte klas niet aanroepen.
+
+5.c
+In Java kan er 1 klasse per klasse overerft worden.
+
+5.d
+Ja
+
+5.e
+Ja
+
+5.f
+Ja, deze methodes moeten allemaal overschreven worden het zelfde geldt voor een
+abstracte methode. 
+
+5.g
+Ja, deze methodes kunnen niet aangeroepen worden als en non-abstracte klasse
+geinitialiseert is en dit zou zorgen dat het programma zal gaan crashen.
+
+5.h
+Met polymorfisme kun je zonder veel gedoe functionaliteit . Een voorbeeld waar je een 
+abstracte klas bij kunt gebruiken is een dier, je hebt verschillende dieren zoals een
+hond, een kat en een duif. Deze drie dieren kunnen allemaal een geluid maken maar ze
+maken allemaal een ander geluid. Met polymorfisme is het mogelijk om al deze dieren 
+een geluid te laten maken zonder een andere functie aan te hoeven roepen want je kunt
+ze allemaal "maakGeluid noemen". bij de duif moet je er vanuit kunnen gaan dat de duif
+kan vliegen want de duif is een vogel, hier voor kun je een interface gebruiken, wat 
+vast stelt dat de Duif moet kunnen vliegen.
+
+interface IKanVliegen{
+	public void vlieg();
+}
+
+abstract class Dier{
+	abstract public void maakGeluid();
+}
+
+class Hond extends Dier{
+	@override
+	public void maakGeluid(){
+		System.out.println("woef");
+	}
+}
+
+class Kat extends Dier{
+	@override
+	public void maakGeluid(){
+		System.out.println("Miauw");
+	}
+}
+
+class Duif extends Dier implements IKanVliegen{
+	
+	@override
+	public void maakGeluid(){
+		System.out.println("roekoe roekoe");
+	}
+	
+	public void vlieg(){
+		System.out.println("Duif vliegt");
+	}
+}
+
+
+6.a
+Ja, een klasse kan abstract zijn zonder abstracte functies, als het nodig is kan je
+extra functionaliteit toevoegen, zonder de super klasse aan te passen. maar als je
+niet wil dat die geinitialiseert wordt kan je dat voorkomen door de super klasse
+abstract te maken. 
+
+6.b
+Nee, niet de subklasse van de subklasse. Ja, wel de andere subklasse die de abstract
+klasse direct extenden. Als dit niet voer de direct extendende subklasse gelde dan 
+konden er methodes aangeroepen worden die geen functionaliteit hebben.  
+
+6.c  
+Een Abstracte class kan een interface zonder problemen implementeren,
+een niet abstracte class moet deze implementeren, deze methodes kunnen anders niet
+aangeroepen worden
+
+6.d
+In een abstracte klasse zitten methodes die nog geen functionaliteit hebben, deze
+kunnen niet aangeroepen want deze doen namelijk niks.
+
+6.e
+Een final methode zorgt er voor dat de methode niet aangepast kan worden door een
+subklasse, dus kan niet overschreden worden. Een abstracte methode moet juist
+overschreden worden. Je kan niet een methode hebben die en overschreden moet worden en
+die tegelijker tijd niet overschreden mag worden.
+
+
+
+
+
+TODO:
+	2b sequence diagram
+		(Stel dat bij de pinpasbetaling zou worden gecommuniceerd
+		 met een Bank object. Teken een sequentie-diagram waaruit 
+		 blijkt hoe je de methode boolean betaal(double tebetalen)
+		 in Pinpas implementeert. Hint: vergeet niet hoe de klasse
+		 Pinpas een referentie naar een Bank object heeft gekregen.)
+-
+
+	Controleren antwoorden
+	
