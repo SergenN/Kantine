@@ -36,6 +36,8 @@ public class Kassa {
             geldInKassa += getTotaalPrijs(persoon);
         }catch(TeWeinigGeldException e){
             System.out.println(e.getMessage());
+        }catch(NullPointerException e){
+            System.out.println("Persoon heeft geen betaal methode");
         }
     }
     

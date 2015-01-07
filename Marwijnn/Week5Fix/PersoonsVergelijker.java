@@ -16,12 +16,12 @@ public class PersoonsVergelijker{
         System.out.println("Persoon1 en Persoon2 zijn " + 
             ((persoon1 == persoon2)? "": "niet ") + "geijk");
         
-       System.out.println("\ntest persoon1.equals(persoon2)");
+        System.out.println("\ntest persoon1.equals(persoon2)");
         System.out.println("Persoon1 en Persoon2 zijn " + 
             ((persoon1.equals(persoon2))? "": "niet ") + "geijk");
             
-       System.out.println("\ntest persoon1 == persoon1");
-        System.out.println("Persoon1 en Persoon2 zijn " + 
+        System.out.println("\ntest persoon1 == persoon1");
+        System.out.println("Persoon1 en Persoon1 zijn " + 
             ((persoon1 == persoon1)? "": "niet ") + "geijk");
     }
 }

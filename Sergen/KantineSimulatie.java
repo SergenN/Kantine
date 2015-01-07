@@ -12,13 +12,15 @@ public class KantineSimulatie {
     private Random random;
     
     // aantal artikelen
-    private static final int AANTAL_ARTIKELEN = 4;
+    private int aantal_artikelen;
     
     // artikelen
-    private static final String[] artikelnamen = new String[] {"Koffie", "Broodje pindakaas", "Broodje kaas", "Appelsap"};
+    private ArrayList<String> artikelnamen;
+    //private static final String[] artikelnamen = new String[] {"Koffie", "Broodje pindakaas", "Broodje kaas", "Appelsap"};
     
     // prijzen
-    private static double[] artikelprijzen = new double[]{1.50, 2.10, 1.65, 1.65};
+    private ArrayList<Double> artikelprijzen;
+    //private static double[] artikelprijzen = new double[]{1.50, 2.10, 1.65, 1.65};
     
     // minimum en maximum aantal artikelen per soort
     private static final int MIN_ARTIKELEN_PER_SOORT = 10000;
@@ -41,13 +43,47 @@ public class KantineSimulatie {
     * Constructor
     */
     public KantineSimulatie(){
+        aantal_artikelen = 0;
+        artikelnamen = new ArrayList<String>();
+        artikelprijzen = new ArrayList<Double>();
         kantine = new Kantine();
         random = new Random();
-        int[] hoeveelheden = getRandomArray(AANTAL_ARTIKELEN, MIN_ARTIKELEN_PER_SOORT, MAX_ARTIKELEN_PER_SOORT);
-        kantineaanbod = new KantineAanbod(artikelnamen, artikelprijzen, hoeveelheden);
-        kantine.setKantineAanbod(kantineaanbod);
     }
     
+    public boolean initArtikelen(){
+        if(artikelprijzen.size() == 0) return false;
+        
+        int[] hoeveelheden = getRandomArray(aantal_artikelen, MIN_ARTIKELEN_PER_SOORT, MAX_ARTIKELEN_PER_SOORT);
+        double[] prijzen = new double[artikelprijzen.size()];
+        String[] namen = new String[artikelnamen.size()];
+        
+        Iterator<Double> dIter = artikelprijzen.iterator();
+        int i = 0;
+        while(dIter.hasNext()){
+            prijzen[i] = dIter.next().doubleValue();
+             i++;
+        }
+        
+        Iterator<String> sIter = artikelnamen.iterator();
+        i = 0;
+        while(sIter.hasNext()){
+            namen[i] = sIter.next();
+             i++;
+        }
+         
+        kantineaanbod = new KantineAanbod(namen, prijzen, hoeveelheden);
+        kantine.setKantineAanbod(kantineaanbod);
+        return true;
+    }
+    
+    /**
+     * Methode om artikelen toe te voegen;
+     * @param artikel
+     */
+    public void addArtikel(String artikelNaam, double prijs){
+        artikelnamen.add(aantal_artikelen, artikelNaam);
+        artikelprijzen.add(aantal_artikelen++, prijs);
+    }
     /**
     * Methode om een array van random getallen liggend tussen min en max
     * van de gegeven lengte te genereren
@@ -84,7 +120,7 @@ public class KantineSimulatie {
     private String[] geefArtikelNamen(int[] indexen) {
     String[] artikelen = new String[indexen.length];
         for(int i = 0; i < indexen.length; i++) {
-            artikelen[i] = artikelnamen[indexen[i]];
+            artikelen[i] = artikelnamen.get(indexen[i]);
         }
     return artikelen;
     }
@@ -95,6 +131,10 @@ public class KantineSimulatie {
     * @param dagen
     */
     public void simuleer(int dagen) {
+        if(!initArtikelen()){
+            System.out.println("Geen Artikelen gevonden");
+            return;
+        }
         
         DecimalFormat f = new DecimalFormat("##.00");
         double[] dagOmzet = new double[dagen];
@@ -124,7 +164,7 @@ public class KantineSimulatie {
                 int aantalartikelen = getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);
                 
                 // genereer de “artikelnummers”, dit zijn indexen van de artikelnamen array
-                int[] tepakken = getRandomArray(aantalartikelen, 0, AANTAL_ARTIKELEN-1);
+                int[] tepakken = getRandomArray(aantalartikelen, 0, aantal_artikelen-1);
                 
                 // vind de artikelnamen op basis van de indexen hierboven
                 String[] artikelen = geefArtikelNamen(tepakken);
@@ -163,9 +203,9 @@ public class KantineSimulatie {
      * check of alle artikelen nog op voorraad zijn, zo niet dan aanvullen.
      */
     private void aantalBijwerken(){
-        for(int i = 0; i < artikelnamen.length; i++){
-            if (kantine.getKantineAanbod().getVooraad(artikelnamen[i]) < MIN_ARTIKELEN_PER_SOORT) {
-                kantine.getKantineAanbod().vooraadAanvullen(artikelnamen[i], 10000);
+        for(int i = 0; i < artikelnamen.size(); i++){
+            if (kantine.getKantineAanbod().getVooraad(artikelnamen.get(i)) < MIN_ARTIKELEN_PER_SOORT) {
+                kantine.getKantineAanbod().vooraadAanvullen(artikelnamen.get(i), 10000);
             }
         }
     }

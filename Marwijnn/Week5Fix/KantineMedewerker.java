@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class KantineMedewerker extends Persoon {
+public class KantineMedewerker extends Persoon implements KortingskaartHouder{
     // instance variables - replace the example below with your own
     private int medewerkersnummer;
     private boolean magachterkassa;
