@@ -91,7 +91,7 @@ abstract te maken.
 
 6.b
 Nee, niet de subklasse van de subklasse. Ja, wel de andere subklasse die de abstract
-klasse direct extenden. Als dit niet voer de direct extendende subklasse gelde dan 
+klasse direct extenden. Als dit niet voor de direct extendende subklasse gold dan 
 konden er methodes aangeroepen worden die geen functionaliteit hebben.  
 
 6.c  
